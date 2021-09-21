@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4"><%= @detail.first_name %> <%= @detail.last_name %></h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+
+    <%= link_to 'Edit', edit_detail_path(@detail),class:"btn btn-success" %> 
+<%= link_to 'Back', details_path,class:"btn btn-danger" %>
+</div>
+<p>
+  <strong>Email:</strong>
+  <%= @detail.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @detail.phone %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @detail.facebook %>
+</p>
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Details</h1>
+
+<table class ="table table-hover">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Facebook</th>
+      <th class="text-center" colspan="3"> Actions </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr>
+        <td><%= detail.first_name %></td>
+        <td><%= detail.last_name %></td>
+        <td><%= detail.email %></td>
+        <td><%= detail.phone %></td>
+        <td><%= detail.facebook %></td>
+       
+        <td><%= link_to 'Show', detail,class:"btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_detail_path(detail),class:"btn btn-warning" %></td>
+        <td><%= link_to 'Delete', detail, :method=> :delete, data: { :confirm=> 'Sure?' },class:"btn btn-danger" %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detail', new_detail_path,class:"btn btn-success" %>
