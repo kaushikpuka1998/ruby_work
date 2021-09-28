@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<h1>Api#index</h1>
+<p>Find me in app/views/apicall/index.html.erb</p>
+
+<div class="Container">
+
+    <table class="table table-hover" >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>password</th>
+             <th>Actions</th>
+        </tr>
+    </thead>
+    <% for item in @body %>
+    
+    <tr>
+        <td><%= item['id'] %></td>
+        <td><%= item['username'] %></td>
+        <td><%= item['password'] %></td> 
+
+        <td><%= link_to 'Delete',hello_path(id: item['id']),method: :delete,class:"btn btn-danger", data: { :confirm=> 'Are you Sure?' }%></td>
+        
+  </tr>
+  
+    <% end %>
+
+    
+    </table>
+</div>

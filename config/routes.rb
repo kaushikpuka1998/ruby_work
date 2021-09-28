@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
 
   
+  get 'apicall/index'
   get 'home/about'
+  delete 'hello' ,to: "apicall#hello"
   root to:  'home#index'
   devise_for :users
   resources :details
