@@ -1,0 +1,2 @@
+module NewdatapiHelper
+end

@@ -31,10 +31,6 @@ class ApicallController < ApplicationController
     @size = @body.size
 
 
-    #post
-    uri2 = URI('http://www.example.com/search.cgi')
-    res = Net::HTTP.post_form(uri2, 'q' => ['natasha', 'perl'], 'max' => '50')
-    puts res.body
 
 
   end

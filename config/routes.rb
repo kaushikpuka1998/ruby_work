@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
 
   
+  get 'newdatapi/create'
   get 'apicall/index'
   get 'home/about'
   delete 'hello' ,to: "apicall#hello"
+  post 'apicreate' ,to: "newdatapi#create"
   root to:  'home#index'
   devise_for :users
   resources :details
