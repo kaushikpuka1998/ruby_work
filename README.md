@@ -1,29 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CRUD Base operation.Devise Gem used, 
+HTTParty used for Rest operation remotely
 
-Things you may want to cover:
-
-  version:
-
-
-* System dependencies
-
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rest API Project Link: https://github.com/kaushikpuka1998/rest_api-NoView-
 # ruby_work
 #Screenshot
 ![Screenshot from 2021-09-30 22-16-52](https://user-images.githubusercontent.com/52675676/135497603-6d55e88a-fb51-47d5-947c-f478f4b855a3.png)
