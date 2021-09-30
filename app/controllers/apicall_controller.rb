@@ -37,7 +37,8 @@ class ApicallController < ApplicationController
 
   def hello
 
-      debugger
+
+      redirect_to  apicall_index_path
       id = params[:id]
       puts "HELLLLLLO#{id}"
       abc = "http://localhost:3000/api/v1/users/#{id}"
@@ -47,7 +48,7 @@ class ApicallController < ApplicationController
       res = http.request(req)
       puts "deleted #{res}"
 
-      redirect_to  apicall_index_path
+      
       
   end
 

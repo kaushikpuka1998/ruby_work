@@ -1,10 +1,16 @@
 <h1>Updatedetail#update</h1>
 <p>Find me in app/views/updatedetail/update.html.erb</p>
 
+
 <%= form_tag('/apiupdate', :method=>'post') do %>
  
-  User Id:
-  <%= params[:id]%>
+ <%= id= params[:id] %>
+
+
+   <div class="form-group col-sm-12">
+    <label>ID:</label>
+    <%= text_field_tag "ID",params[:id],placeholder:"ID",class:"form-control",readonly: "true"%>
+  </div>
   <div class="form-group col-sm-12">
     <label>Username:</label>
     <%= text_field_tag "Username",params[:username],placeholder:"User Name",class:"form-control"%>
@@ -15,8 +21,10 @@
     <%= text_field_tag "Password",params[:password],placeholder:"Password",class:"form-control"%>
   </div>
 
+ 
+  
   <br>
-<button class="btn btn-warning" value="submit">Update</button>
 
+<button class="btn btn-success" value="submit">Confirm</button>
 
 <% end %>
