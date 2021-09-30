@@ -1,9 +1,10 @@
-<h1>Newdatapi#create</h1>
-<p>Find me in app/views/newdatapi/create.html.erb</p>
+<h1>Updatedetail#update</h1>
+<p>Find me in app/views/updatedetail/update.html.erb</p>
 
-<%= form_tag('/apicreate', :method=>'post') do %>
+<%= form_tag('/apiupdate', :method=>'post') do %>
  
-
+  User Id:
+  <%= params[:id]%>
   <div class="form-group col-sm-12">
     <label>Username:</label>
     <%= text_field_tag "Username",params[:username],placeholder:"User Name",class:"form-control"%>
@@ -15,9 +16,7 @@
   </div>
 
   <br>
-<button class="btn btn-success" value="submit">Submit</button>
+<button class="btn btn-warning" value="submit">Update</button>
+
 
 <% end %>
-
-
-

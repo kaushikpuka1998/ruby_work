@@ -15,7 +15,8 @@
             <th>ID</th>
             <th>Username</th>
             <th>password</th>
-             <th>Actions</th>
+            <th>Actions</th>
+            
         </tr>
     </thead>
     <% for item in @body %>
@@ -25,7 +26,18 @@
         <td><%= item['username'] %></td>
         <td><%= item['password'] %></td> 
 
-        <td><%= link_to 'Delete',hello_path(id: item['id']),method: :delete,class:"btn btn-danger", data: { :confirm=> 'Are you Sure?' }%></td>
+        <td>
+        
+         <%= link_to 'Edit',updatedetail_update_path(id: item['id'],username: item['username'],password: item['password']),class:"btn btn-warning" %>
+        
+        <%= link_to 'Delete',hello_path(id: item['id']),method: :delete,class:"btn btn-danger",data: { :confirm=> 'Are you Sure?' }%>
+        
+       
+        
+        
+        </td>
+        
+        
         
   </tr>
   

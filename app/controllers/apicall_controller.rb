@@ -37,6 +37,7 @@ class ApicallController < ApplicationController
 
   def hello
 
+      debugger
       id = params[:id]
       puts "HELLLLLLO#{id}"
       abc = "http://localhost:3000/api/v1/users/#{id}"
